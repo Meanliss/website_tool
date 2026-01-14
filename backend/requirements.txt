@@ -1,0 +1,17 @@
+# Core API Framework
+fastapi>=0.104.0
+uvicorn[standard]>=0.24.0
+pydantic>=2.5.0
+
+# Data Loading
+pyyaml>=6.0
+python-multipart>=0.0.6
+
+# SharePoint Integration (for future use)
+# Uncomment when connecting to SharePoint List:
+# Office365-REST-Python-Client>=2.5.0
+# requests>=2.31.0
+
+# Optional: Excel/CSV support
+# pandas>=2.1.0
+# openpyxl>=3.1.0
