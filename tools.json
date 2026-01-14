@@ -1,0 +1,167 @@
+[
+  {
+    "id": "system-test-sw",
+    "name": "System Test SW Testing",
+    "description": "Software testing tools and documentation for system testing",
+    "category": "testing",
+    "icon": "🧪",
+    "url": "https://cccn.apac.bosch.com/OSS-CN_DT_AI_HomePage/#/system-test-sw-testing",
+    "tags": ["testing", "qa", "system-test", "bosch"],
+    "is_external": true,
+    "guide_content": "# System Test SW Testing\n\n## Overview\nThis tool provides comprehensive testing capabilities for system software.\n\n## Getting Started\n1. Access the tool via the link above\n2. Log in with your credentials\n3. Navigate to your project\n\n## Features\n- Automated testing workflows\n- Test case management\n- Results tracking and reporting"
+  },
+  {
+    "id": "python-guide",
+    "name": "Python Development Guide",
+    "description": "Internal best practices and guidelines for Python development",
+    "category": "development",
+    "icon": "🐍",
+    "url": "/guides/python",
+    "tags": ["python", "development", "guide", "best-practices"],
+    "is_external": false,
+    "guide_content": "# Python Development Guide\n\n## Setup\n```bash\npython -m venv venv\nsource venv/bin/activate  # On Windows: venv\\Scripts\\activate\npip install -r requirements.txt\n```\n\n## Coding Standards\n- Follow PEP 8\n- Use type hints\n- Write docstrings\n- Add unit tests"
+  },
+  {
+    "id": "docker-hub",
+    "name": "Docker Hub",
+    "description": "Official container registry for Docker images",
+    "category": "devops",
+    "icon": "🐳",
+    "url": "https://hub.docker.com",
+    "tags": ["docker", "containers", "devops", "registry"],
+    "is_external": true,
+    "guide_content": null
+  },
+  {
+    "id": "jupyter-lab",
+    "name": "Jupyter Lab",
+    "description": "Interactive development environment for notebooks, code, and data",
+    "category": "ai_ml",
+    "icon": "📓",
+    "url": "https://jupyter.org",
+    "tags": ["jupyter", "notebooks", "data-science", "python"],
+    "is_external": true,
+    "guide_content": "# Jupyter Lab Guide\n\n## Installation\n```bash\npip install jupyterlab\n```\n\n## Starting Jupyter Lab\n```bash\njupyter lab\n```\n\n## Key Features\n- Interactive notebooks\n- Built-in terminal\n- File browser\n- Extension system"
+  },
+  {
+    "id": "github",
+    "name": "GitHub",
+    "description": "Code hosting platform for version control and collaboration",
+    "category": "collaboration",
+    "icon": "🐙",
+    "url": "https://github.com",
+    "tags": ["git", "collaboration", "version-control", "code-review"],
+    "is_external": true,
+    "guide_content": null
+  },
+  {
+    "id": "tableau",
+    "name": "Tableau",
+    "description": "Data visualization and business intelligence platform",
+    "category": "data",
+    "icon": "📊",
+    "url": "https://www.tableau.com",
+    "tags": ["visualization", "bi", "analytics", "data"],
+    "is_external": true,
+    "guide_content": null
+  },
+  {
+    "id": "postman",
+    "name": "Postman API Testing",
+    "description": "Complete API development and testing environment",
+    "category": "testing",
+    "icon": "📮",
+    "url": "https://www.postman.com",
+    "tags": ["api", "testing", "rest", "automation"],
+    "is_external": true,
+    "guide_content": "# Postman API Testing Guide\n\n## Quick Start\n1. Download and install Postman\n2. Create a new collection\n3. Add your API requests\n\n## Testing APIs\n- Use GET, POST, PUT, DELETE methods\n- Add authentication headers\n- Write test scripts in JavaScript\n- Run collections with Newman CLI\n\n## Best Practices\n- Organize requests in collections\n- Use environment variables\n- Add pre-request scripts\n- Document your APIs"
+  },
+  {
+    "id": "git-workflow",
+    "name": "Git Workflow Guide",
+    "description": "Internal git branching strategy and best practices",
+    "category": "development",
+    "icon": "🌿",
+    "url": "/internal/git-guide",
+    "tags": ["git", "workflow", "best-practices", "version-control"],
+    "is_external": false,
+    "guide_content": "# Git Workflow Guide\n\n## Branch Strategy\n- `main` - Production-ready code\n- `develop` - Integration branch\n- `feature/*` - New features\n- `bugfix/*` - Bug fixes\n- `hotfix/*` - Urgent production fixes\n\n## Common Commands\n```bash\n# Create feature branch\ngit checkout -b feature/your-feature develop\n\n# Commit changes\ngit add .\ngit commit -m \"feat: add new feature\"\n\n# Push to remote\ngit push origin feature/your-feature\n\n# Merge back to develop\ngit checkout develop\ngit merge --no-ff feature/your-feature\n```\n\n## Commit Message Convention\n- `feat:` - New feature\n- `fix:` - Bug fix\n- `docs:` - Documentation\n- `refactor:` - Code refactoring\n- `test:` - Adding tests"
+  },
+  {
+    "id": "chatgpt",
+    "name": "ChatGPT",
+    "description": "AI-powered conversational assistant by OpenAI",
+    "category": "ai_ml",
+    "icon": "🤖",
+    "url": "https://chat.openai.com",
+    "tags": ["ai", "chatbot", "nlp", "openai"],
+    "is_external": true,
+    "guide_content": null
+  },
+  {
+    "id": "data-pipeline",
+    "name": "Data Pipeline Documentation",
+    "description": "Internal documentation for ETL data pipelines",
+    "category": "data",
+    "icon": "🔄",
+    "url": "/internal/data-pipeline",
+    "tags": ["etl", "pipeline", "data-engineering", "documentation"],
+    "is_external": false,
+    "guide_content": "# Data Pipeline Documentation\n\n## Architecture\nOur data pipeline follows the Extract-Transform-Load (ETL) pattern.\n\n## Pipeline Stages\n1. **Extract** - Pull data from source systems\n2. **Transform** - Clean and process data\n3. **Load** - Store in data warehouse\n\n## Access Internal Pipeline\nNavigate to: `\\\\bosch-internal\\data-engineering\\pipelines`\n\n## Configuration\n```yaml\nsource:\n  type: postgresql\n  host: db.internal.bosch.com\n  database: production\n\ndestination:\n  type: snowflake\n  warehouse: analytics\n```\n\n## Monitoring\n- Check pipeline status at `/internal/pipeline-monitor`\n- Review logs in `\\\\bosch-internal\\logs\\data-pipeline`"
+  },
+  {
+    "id": "jenkins",
+    "name": "Jenkins CI/CD",
+    "description": "Automation server for continuous integration and deployment",
+    "category": "devops",
+    "icon": "👷",
+    "url": "https://jenkins.io",
+    "tags": ["ci-cd", "automation", "jenkins", "devops"],
+    "is_external": true,
+    "guide_content": "# Jenkins CI/CD Guide\n\n## Pipeline Setup\n```groovy\npipeline {\n    agent any\n    stages {\n        stage('Build') {\n            steps {\n                sh 'npm install'\n                sh 'npm run build'\n            }\n        }\n        stage('Test') {\n            steps {\n                sh 'npm test'\n            }\n        }\n        stage('Deploy') {\n            steps {\n                sh 'npm run deploy'\n            }\n        }\n    }\n}\n```\n\n## Key Features\n- Automated builds\n- Plugin ecosystem\n- Distributed builds\n- Pipeline as code"
+  },
+  {
+    "id": "confluence",
+    "name": "Confluence Wiki",
+    "description": "Internal team documentation and knowledge base",
+    "category": "collaboration",
+    "icon": "📚",
+    "url": "https://confluence.bosch.com",
+    "tags": ["wiki", "documentation", "collaboration", "knowledge-base"],
+    "is_external": true,
+    "guide_content": "# Confluence Best Practices\n\n## Creating Pages\n1. Navigate to your space\n2. Click \"Create\"\n3. Choose a template\n4. Add content using editor\n\n## Tips\n- Use page hierarchy for organization\n- Add labels for searchability\n- Link related pages\n- Keep pages up to date\n\n## Internal Links\n- Team Space: `/display/TEAM`\n- Project Docs: `/display/PROJECT`"
+  },
+  {
+    "id": "test-environment",
+    "name": "Test Environment Access",
+    "description": "Access internal testing environments and test data",
+    "category": "testing",
+    "icon": "🔬",
+    "url": "/internal/test-env",
+    "tags": ["testing", "environment", "test-data", "qa"],
+    "is_external": false,
+    "guide_content": "# Test Environment Guide\n\n## Available Environments\n- **DEV**: `https://dev.internal.bosch.com`\n- **QA**: `https://qa.internal.bosch.com`\n- **UAT**: `https://uat.internal.bosch.com`\n\n## Access Credentials\nContact IT team for VPN access and credentials.\n\n## Test Data Location\nNetwork path: `\\\\bosch-internal\\test-data\\qa`\n\n## Database Connections\n```\nDEV DB: dev-db.internal.bosch.com:5432\nQA DB: qa-db.internal.bosch.com:5432\n```\n\n## Important Notes\n- Never use production data in test environments\n- Reset test data weekly (every Monday)\n- Report issues to qa-team@bosch.com"
+  },
+  {
+    "id": "kubernetes",
+    "name": "Kubernetes Dashboard",
+    "description": "Container orchestration platform management interface",
+    "category": "devops",
+    "icon": "☸️",
+    "url": "https://kubernetes.io",
+    "tags": ["kubernetes", "k8s", "containers", "orchestration"],
+    "is_external": true,
+    "guide_content": null
+  },
+  {
+    "id": "ml-platform",
+    "name": "ML Platform",
+    "description": "Internal machine learning model training and deployment platform",
+    "category": "ai_ml",
+    "icon": "🧠",
+    "url": "/internal/ml-platform",
+    "tags": ["machine-learning", "ai", "mlops", "training"],
+    "is_external": false,
+    "guide_content": "# ML Platform Guide\n\n## Platform Access\nNavigate to: `https://ml.internal.bosch.com`\n\n## Training Models\n1. Upload your dataset to `/data/training`\n2. Define model configuration\n3. Submit training job\n4. Monitor training progress\n\n## Model Deployment\n```python\nfrom ml_platform import deploy\n\nmodel = deploy.load_model('model-v1.0')\nmodel.deploy(environment='production')\n```\n\n## Resources\n- GPU Cluster: Available 24/7\n- Storage: 10TB per project\n- Documentation: `\\\\bosch-internal\\ml-platform\\docs`\n\n## Support\nContact: ml-platform-support@bosch.com"
+  }
+]
