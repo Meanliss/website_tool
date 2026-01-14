@@ -1,12 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
 import Header from './components/Header';
 import Sidebar from './components/Sidebar';
 import ToolGrid from './components/ToolGrid';
 import GuideModal from './components/GuideModal';
 import './App.css';
-
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000';
 
 function App() {
   const [tools, setTools] = useState([]);
@@ -25,9 +22,15 @@ function App() {
   // Fetch initial data
   useEffect(() => {
     fetchTools();
-    fetchCategories();
-    fetchStats();
   }, []);
+
+  // Calculate categories and stats after tools are loaded
+  useEffect(() => {
+    if (tools.length > 0) {
+      calculateCategories();
+      calculateStats();
+    }
+  }, [tools]);
 
   // Apply filters
   useEffect(() => {
@@ -36,30 +39,45 @@ function App() {
 
   const fetchTools = async () => {
     try {
-      const response = await axios.get(`${API_BASE_URL}/api/tools`);
-      setTools(response.data);
-      setFilteredTools(response.data);
+      // Fetch from local static JSON file
+      const response = await fetch('/tools.json');
+      const data = await response.json();
+      setTools(data);
+      setFilteredTools(data);
     } catch (error) {
       console.error('Error fetching tools:', error);
+      setTools([]);
+      setFilteredTools([]);
     }
   };
 
-  const fetchCategories = async () => {
-    try {
-      const response = await axios.get(`${API_BASE_URL}/api/categories`);
-      setCategories(response.data);
-    } catch (error) {
-      console.error('Error fetching categories:', error);
-    }
+  const calculateCategories = () => {
+    // Extract unique categories from tools
+    const uniqueCategories = [...new Set(tools.map(t => t.category))].map(cat => ({
+      value: cat,
+      display_name: cat.replace(/_/g, ' ').split(' ').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')
+    }));
+    setCategories(uniqueCategories);
   };
 
-  const fetchStats = async () => {
-    try {
-      const response = await axios.get(`${API_BASE_URL}/api/stats`);
-      setStats(response.data);
-    } catch (error) {
-      console.error('Error fetching stats:', error);
-    }
+  const calculateStats = () => {
+    // Calculate stats from tools data
+    const totalTools = tools.length;
+    const externalTools = tools.filter(t => t.is_external).length;
+    const internalTools = totalTools - externalTools;
+    const categoryCount = {};
+    
+    tools.forEach(t => {
+      categoryCount[t.category] = (categoryCount[t.category] || 0) + 1;
+    });
+    
+    setStats({
+      total_tools: totalTools,
+      total_categories: Object.keys(categoryCount).length,
+      tools_by_category: categoryCount,
+      external_tools: externalTools,
+      internal_tools: internalTools
+    });
   };
 
   const applyFilters = () => {
