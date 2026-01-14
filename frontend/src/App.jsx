@@ -40,7 +40,8 @@ function App() {
   const fetchTools = async () => {
     try {
       // Fetch from local static JSON file
-      const response = await fetch('/tools.json');
+      // Use relative path to work with base path in vite.config.js
+      const response = await fetch('./tools.json');
       const data = await response.json();
       setTools(data);
       setFilteredTools(data);
