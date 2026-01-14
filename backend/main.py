@@ -31,7 +31,7 @@ app.add_middleware(
 )
 
 # Initialize service
-tool_service = ToolService(config_path="../config/tools.yaml")
+tool_service = ToolService(config_path="config/tools.yaml")
 
 # Pydantic models for API responses
 class ToolResponse(BaseModel):

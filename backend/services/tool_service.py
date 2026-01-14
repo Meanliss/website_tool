@@ -24,7 +24,7 @@ class ToolService:
     - Integrating with external APIs
     """
     
-    def __init__(self, config_path: str = "../config/tools.yaml"):
+    def __init__(self, config_path: str = "config/tools.yaml"):
         """
         Initialize service with tools from configuration
         

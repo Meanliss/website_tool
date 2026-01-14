@@ -1,0 +1,398 @@
+# Sample Tool Configuration
+# Add your tools here following the schema below
+
+tools:
+  # Example 1: External Tool
+  - id: system-test-sw
+    name: System Test SW Testing
+    description: Software testing tools and documentation for system testing
+    category: testing
+    icon: 🧪
+    url: https://cccn.apac.bosch.com/OSS-CN_DT_AI_HomePage/#/system-test-sw-testing
+    tags: [testing, qa, system-test, bosch]
+    is_external: true
+    guide_content: |
+      # System Test SW Testing
+      
+      ## Overview
+      This tool provides comprehensive testing capabilities for system software.
+      
+      ## Getting Started
+      1. Access the tool via the link above
+      2. Log in with your credentials
+      3. Navigate to your project
+      
+      ## Features
+      - Automated testing workflows
+      - Test case management
+      - Results tracking and reporting
+  
+  # Example 2: Development Tool
+  - id: python-guide
+    name: Python Development Guide
+    description: Internal best practices and guidelines for Python development
+    category: development
+    icon: 🐍
+    url: /guides/python
+    tags: [python, development, guide, best-practices]
+    is_external: false
+    guide_content: |
+      # Python Development Guide
+      
+      ## Setup
+      ```bash
+      python -m venv venv
+      source venv/bin/activate  # On Windows: venv\Scripts\activate
+      pip install -r requirements.txt
+      ```
+      
+      ## Coding Standards
+      - Follow PEP 8
+      - Use type hints
+      - Write docstrings
+      - Add unit tests
+  
+  # Example 3: DevOps Tool
+  - id: docker-hub
+    name: Docker Hub
+    description: Official container registry for Docker images
+    category: devops
+    icon: 🐳
+    url: https://hub.docker.com
+    tags: [docker, containers, devops, registry]
+    is_external: true
+  
+  # Example 4: AI/ML Tool
+  - id: jupyter-lab
+    name: Jupyter Lab
+    description: Interactive development environment for notebooks, code, and data
+    category: ai_ml
+    icon: 📓
+    url: https://jupyter.org
+    tags: [jupyter, notebooks, data-science, python]
+    is_external: true
+    guide_content: |
+      # Jupyter Lab Guide
+      
+      ## Installation
+      ```bash
+      pip install jupyterlab
+      ```
+      
+      ## Starting Jupyter Lab
+      ```bash
+      jupyter lab
+      ```
+      
+      ## Key Features
+      - Interactive notebooks
+      - Built-in terminal
+      - File browser
+      - Extension system
+  
+  # Example 5: Collaboration Tool
+  - id: github
+    name: GitHub
+    description: Code hosting platform for version control and collaboration
+    category: collaboration
+    icon: 🐙
+    url: https://github.com
+    tags: [git, collaboration, version-control, code-review]
+    is_external: true
+  
+  # Example 6: Data Tool
+  - id: tableau
+    name: Tableau
+    description: Data visualization and business intelligence platform
+    category: data
+    icon: 📊
+    url: https://www.tableau.com
+    tags: [visualization, bi, analytics, data]
+    is_external: true
+  
+  # Example 7: Testing Tool with Guide
+  - id: postman
+    name: Postman API Testing
+    description: Complete API development and testing environment
+    category: testing
+    icon: 📮
+    url: https://www.postman.com
+    tags: [api, testing, rest, automation]
+    is_external: true
+    guide_content: |
+      # Postman API Testing Guide
+      
+      ## Quick Start
+      1. Download and install Postman
+      2. Create a new collection
+      3. Add your API requests
+      
+      ## Testing APIs
+      - Use GET, POST, PUT, DELETE methods
+      - Add authentication headers
+      - Write test scripts in JavaScript
+      - Run collections with Newman CLI
+      
+      ## Best Practices
+      - Organize requests in collections
+      - Use environment variables
+      - Add pre-request scripts
+      - Document your APIs
+  
+  # Example 8: Development Tool - Internal Guide
+  - id: git-workflow
+    name: Git Workflow Guide
+    description: Internal git branching strategy and best practices
+    category: development
+    icon: 🌿
+    url: /internal/git-guide
+    tags: [git, workflow, best-practices, version-control]
+    is_external: false
+    guide_content: |
+      # Git Workflow Guide
+      
+      ## Branch Strategy
+      - `main` - Production-ready code
+      - `develop` - Integration branch
+      - `feature/*` - New features
+      - `bugfix/*` - Bug fixes
+      - `hotfix/*` - Urgent production fixes
+      
+      ## Common Commands
+      ```bash
+      # Create feature branch
+      git checkout -b feature/your-feature develop
+      
+      # Commit changes
+      git add .
+      git commit -m "feat: add new feature"
+      
+      # Push to remote
+      git push origin feature/your-feature
+      
+      # Merge back to develop
+      git checkout develop
+      git merge --no-ff feature/your-feature
+      ```
+      
+      ## Commit Message Convention
+      - `feat:` - New feature
+      - `fix:` - Bug fix
+      - `docs:` - Documentation
+      - `refactor:` - Code refactoring
+      - `test:` - Adding tests
+  
+  # Example 9: AI/ML Tool - External
+  - id: chatgpt
+    name: ChatGPT
+    description: AI-powered conversational assistant by OpenAI
+    category: ai_ml
+    icon: 🤖
+    url: https://chat.openai.com
+    tags: [ai, chatbot, nlp, openai]
+    is_external: true
+  
+  # Example 10: Data Tool - Internal Path
+  - id: data-pipeline
+    name: Data Pipeline Documentation
+    description: Internal documentation for ETL data pipelines
+    category: data
+    icon: 🔄
+    url: /internal/data-pipeline
+    tags: [etl, pipeline, data-engineering, documentation]
+    is_external: false
+    guide_content: |
+      # Data Pipeline Documentation
+      
+      ## Architecture
+      Our data pipeline follows the Extract-Transform-Load (ETL) pattern.
+      
+      ## Pipeline Stages
+      1. **Extract** - Pull data from source systems
+      2. **Transform** - Clean and process data
+      3. **Load** - Store in data warehouse
+      
+      ## Access Internal Pipeline
+      Navigate to: `\\bosch-internal\data-engineering\pipelines`
+      
+      ## Configuration
+      ```yaml
+      source:
+        type: postgresql
+        host: db.internal.bosch.com
+        database: production
+      
+      destination:
+        type: snowflake
+        warehouse: analytics
+      ```
+      
+      ## Monitoring
+      - Check pipeline status at `/internal/pipeline-monitor`
+      - Review logs in `\\bosch-internal\logs\data-pipeline`
+  
+  # Example 11: DevOps Tool - CI/CD
+  - id: jenkins
+    name: Jenkins CI/CD
+    description: Automation server for continuous integration and deployment
+    category: devops
+    icon: 👷
+    url: https://jenkins.io
+    tags: [ci-cd, automation, jenkins, devops]
+    is_external: true
+    guide_content: |
+      # Jenkins CI/CD Guide
+      
+      ## Pipeline Setup
+      ```groovy
+      pipeline {
+          agent any
+          stages {
+              stage('Build') {
+                  steps {
+                      sh 'npm install'
+                      sh 'npm run build'
+                  }
+              }
+              stage('Test') {
+                  steps {
+                      sh 'npm test'
+                  }
+              }
+              stage('Deploy') {
+                  steps {
+                      sh 'npm run deploy'
+                  }
+              }
+          }
+      }
+      ```
+      
+      ## Key Features
+      - Automated builds
+      - Plugin ecosystem
+      - Distributed builds
+      - Pipeline as code
+  
+  # Example 12: Collaboration Tool - Internal
+  - id: confluence
+    name: Confluence Wiki
+    description: Internal team documentation and knowledge base
+    category: collaboration
+    icon: 📚
+    url: https://confluence.bosch.com
+    tags: [wiki, documentation, collaboration, knowledge-base]
+    is_external: true
+    guide_content: |
+      # Confluence Best Practices
+      
+      ## Creating Pages
+      1. Navigate to your space
+      2. Click "Create"
+      3. Choose a template
+      4. Add content using editor
+      
+      ## Tips
+      - Use page hierarchy for organization
+      - Add labels for searchability
+      - Link related pages
+      - Keep pages up to date
+      
+      ## Internal Links
+      - Team Space: `/display/TEAM`
+      - Project Docs: `/display/PROJECT`
+  
+  # Example 13: Testing Tool - Internal Test Environment
+  - id: test-environment
+    name: Test Environment Access
+    description: Access internal testing environments and test data
+    category: testing
+    icon: 🔬
+    url: /internal/test-env
+    tags: [testing, environment, test-data, qa]
+    is_external: false
+    guide_content: |
+      # Test Environment Guide
+      
+      ## Available Environments
+      - **DEV**: `https://dev.internal.bosch.com`
+      - **QA**: `https://qa.internal.bosch.com`
+      - **UAT**: `https://uat.internal.bosch.com`
+      
+      ## Access Credentials
+      Contact IT team for VPN access and credentials.
+      
+      ## Test Data Location
+      Network path: `\\bosch-internal\test-data\qa`
+      
+      ## Database Connections
+      ```
+      DEV DB: dev-db.internal.bosch.com:5432
+      QA DB: qa-db.internal.bosch.com:5432
+      ```
+      
+      ## Important Notes
+      - Never use production data in test environments
+      - Reset test data weekly (every Monday)
+      - Report issues to qa-team@bosch.com
+  
+  # Example 14: DevOps Tool - Kubernetes
+  - id: kubernetes
+    name: Kubernetes Dashboard
+    description: Container orchestration platform management interface
+    category: devops
+    icon: ☸️
+    url: https://kubernetes.io
+    tags: [kubernetes, k8s, containers, orchestration]
+    is_external: true
+  
+  # Example 15: AI Tool - Internal ML Platform
+  - id: ml-platform
+    name: ML Platform
+    description: Internal machine learning model training and deployment platform
+    category: ai_ml
+    icon: 🧠
+    url: /internal/ml-platform
+    tags: [machine-learning, ai, mlops, training]
+    is_external: false
+    guide_content: |
+      # ML Platform Guide
+      
+      ## Platform Access
+      Navigate to: `https://ml.internal.bosch.com`
+      
+      ## Training Models
+      1. Upload your dataset to `/data/training`
+      2. Define model configuration
+      3. Submit training job
+      4. Monitor training progress
+      
+      ## Model Deployment
+      ```python
+      from ml_platform import deploy
+      
+      model = deploy.load_model('model-v1.0')
+      model.deploy(environment='production')
+      ```
+      
+      ## Resources
+      - GPU Cluster: Available 24/7
+      - Storage: 10TB per project
+      - Documentation: `\\bosch-internal\ml-platform\docs`
+      
+      ## Support
+      Contact: ml-platform-support@bosch.com
+
+# To add more tools, copy the template below and fill in the details:
+#
+#  - id: unique-tool-id
+#    name: Tool Display Name
+#    description: Brief description of the tool
+#    category: testing|development|ai_ml|data|devops|collaboration|other
+#    icon: 🔧  # Choose an emoji
+#    url: https://example.com
+#    tags: [tag1, tag2, tag3]
+#    is_external: true  # true for external links, false for internal guides
+#    guide_content: |  # Optional: Add usage guide in Markdown
+#      # Tool Name
+#      Guide content here...
