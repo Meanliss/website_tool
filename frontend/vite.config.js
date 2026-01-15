@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig(({ mode }) => ({
   plugins: [react()],
-  base: '/website_tool/',
+  base: '/',
   server: {
     port: 5173,
     // Proxy chỉ cho development, production dùng VITE_API_URL
